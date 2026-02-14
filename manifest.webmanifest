@@ -1,0 +1,18 @@
+{
+  "name": "AAA x WWE 2K Trios Showcase",
+  "short_name": "AAA Trios",
+  "description": "Build trios teams and simulate cinematic lucha libre matches.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0a0a11",
+  "theme_color": "#0a0a11",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

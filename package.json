@@ -1,0 +1,18 @@
+{
+  "name": "aaa-wwe2k-trios-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AAA x WWE 2K-style trios wrestling game packaged for web and mobile stores.",
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "cap:init": "npx cap sync",
+    "cap:android": "npx cap open android",
+    "cap:ios": "npx cap open ios"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2"
+  }
+}

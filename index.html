@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAA x WWE 2K Trios Showcase</title>
+    <meta name="theme-color" content="#0a0a11" />
+    <meta name="description" content="Build AAA trios and simulate cinematic WWE 2K-style lucha libre matches." />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>AAA x WWE 2K Trios Showcase</h1>
+        <p>
+          Build two <strong>3-wrestler teams</strong> from the active AAA-inspired roster,
+          then run a cinematic match simulation.
+        </p>
+      </header>
+
+      <section class="layout">
+        <section class="panel roster-panel">
+          <h2>AAA Roster</h2>
+          <p class="hint">Click a wrestler to inspect stats and add them to a team.</p>
+          <input id="search" type="search" placeholder="Search wrestler name..." />
+          <div id="roster" class="roster-grid"></div>
+        </section>
+
+        <section class="panel selection-panel">
+          <h2>Team Builder</h2>
+          <div class="team-wrap">
+            <div>
+              <h3>Técnicos</h3>
+              <ul id="teamA" class="team-list"></ul>
+            </div>
+            <div>
+              <h3>Rudos</h3>
+              <ul id="teamB" class="team-list"></ul>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="simulate" disabled>Start Match</button>
+            <button id="reset">Reset</button>
+          </div>
+          <article id="spotlight" class="spotlight">
+            <h3>Wrestler Spotlight</h3>
+            <p>Select a wrestler from the roster.</p>
+          </article>
+        </section>
+      </section>
+
+      <section class="panel commentary-panel">
+        <h2>Match Feed</h2>
+        <div id="commentary" class="commentary"></div>
+        <div id="result" class="result"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>
